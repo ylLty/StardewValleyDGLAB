@@ -1,0 +1,79 @@
+Stardew Valley X DG-LAB 配置文件编辑指南
+
+本文件说明如何编辑Config.json中的各个属性。请使用记事本或代码编辑器打开Config.json文件，只修改冒号后面的值
+=== 编辑注意事项 ===
+1. 只修改冒号后面的值，保持其他字符不变
+2.  true/false值必须小写
+3.  数字值必须在指定范围内
+4.  波形字符串必须符合DG-LAB蓝牙协议https://github.com/DG-LAB-OPENSOURCE/DG-LAB-OPENSOURCE/blob/main/coyote/v3/README_V3.md
+5.  删除Config.json文件可恢复所有默认设置
+
+注意：同个选项中的BreakLimit(可突破上限)和Increase(增加)不能同时为true
+
+以下开始讲解：
+
+=== 服务设置 ===
+IP: 手动设置服务IP地址，留空则使用自动获取
+AutoIP: true=自动获取IP，false=手动设置IP
+Port: 服务端口号，默认9999
+AutoPort: true=自动获取可用端口，false=手动设置端口
+
+=== 通道设置 ===
+EnableA: true=启用通道A，false=禁用通道A
+MaxA: 通道A最大强度，范围0-200
+MinA: 通道A最小强度，范围0-200
+EnableB: true=启用通道B，false=禁用通道B
+MaxB: 通道B最大强度，范围0-200
+MinB: 通道B最小强度，范围0-200
+IgnoreSoftLimit: true=无视强度软上限,false=读取强度软上线
+
+=== UI设置 ===
+OpenPanelKey: 显示强度面板的快捷键，默认L键
+UIx: 强度面板水平位置，范围0-1000
+UIy: 强度面板垂直位置，范围0-1000
+
+=== 惩罚设置 ===
+
+【基本伤害】
+DamagePer5: 每受到5点伤害增加的强度值
+DamageWave: 受到伤害时播放的波形
+DeathStrength: 死亡时的强度值
+DeathWave: 死亡时播放的波形
+DeathEnable: true=启用死亡惩罚，false=禁用
+DeathBreakLimit: true=死亡时可突破强度上限，false=不可突破
+DeathIncrease: true=死亡时强度增加，false=强度固定
+
+【强度下降】
+StrengthDecayPerSec: 每秒强度下降值
+StrengthDecayDelay: 强度下降开始前的延迟时间（秒）
+StrengthRecoverPenalty: 每恢复5点生命值下降的强度
+
+【体力惩罚】
+StaminaThreshold: 体力低于此值时开始惩罚
+StaminaWave: 体力不足时播放的波形
+StaminaEnable: true=启用体力惩罚，false=禁用
+StaminaInterval: 体力惩罚强度增加的间隔时间（秒）
+StaminaIncrease: 每次增加的强度值
+
+【事件惩罚】
+FaintStrength: 晕倒时的强度值
+FaintWave: 晕倒时播放的波形
+FaintEnable: true=启用晕倒惩罚，false=禁用
+FaintDuration: 晕倒惩罚持续时间（秒）
+FaintIncrease: true=晕倒时强度增加，false=强度固定
+FaintBreakLimit: true=晕倒时可突破强度上限，false=不可突破
+
+UnhookStrength: 脱钩时的强度值
+UnhookWave: 脱钩时播放的波形
+UnhookEnable: true=启用脱钩惩罚，false=禁用
+UnhookDuration: 脱钩惩罚持续时间（秒）
+UnhookIncrease: true=脱钩时强度增加，false=强度固定
+UnhookBreakLimit: true=脱钩时可突破强度上限，false=不可突破
+
+DailyIncomeTarget: 日收入目标值
+DailyIncomeWave: 日收入未达标时播放的波形
+DailyIncomeStrength: 日收入未达标时的强度值
+DailyIncomeEnable: true=启用日收入惩罚，false=禁用
+DailyIncomeDuration: 日收入惩罚持续时间（秒）
+DailyIncomeIncrease: true=日收入未达标时强度增加，false=强度固定
+DailyIncomeBreakLimit: true=日收入未达标时可突破强度上限，false=不可突破

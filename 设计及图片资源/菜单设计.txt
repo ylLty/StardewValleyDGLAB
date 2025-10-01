@@ -1,3 +1,5 @@
+技术原因，放弃做菜单了
+
 顶部标题：Stardew Valley X DG-LAB
     服务设置(这是会显示在左侧的选项卡,下文中有类似缩进的同理)：
         App未连接（DGLABServer.IsConn==false）（或是 App已连接（DGLABServer.IsConn==true））（纯文字提示）
