@@ -9,8 +9,11 @@
 
   <ItemGroup>
     <Compile Remove="新建文件夹\**" />
+    <Compile Remove="设计及图片资源\**" />
     <EmbeddedResource Remove="新建文件夹\**" />
+    <EmbeddedResource Remove="设计及图片资源\**" />
     <None Remove="新建文件夹\**" />
+    <None Remove="设计及图片资源\**" />
   </ItemGroup>
 
   <ItemGroup>
